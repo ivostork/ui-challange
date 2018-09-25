@@ -1,7 +1,8 @@
 .header {
   position: relative;
-  z-index: 1;
-  background-color: color(4);
+  z-index: 1;  
+  padding:rem(12) 0;  
+  border-bottom: 1px solid color(6);
 
   
   .header-flex {
@@ -10,51 +11,40 @@
   }
 
     .logo {
-      display: flex;
-      align-items: center;
-      font-size: rem(24);
-      font-weight: bold;
-      letter-spacing: .5px;
-      white-space: nowrap;
-
-      color:color(3);
+      flex:0 0 rem(145);
+      height: rem(38);      
       text-decoration: none;
 
-      &:focus {
-        background-color:color(2);
-      }
+      background: url('../assets/logo.svg');
     }
 
-    .navigation {
+    .links {
       display: flex;
-      overflow: auto;
-      margin-left:rem(8);
-      -webkit-overflow-scrolling: touch;
-      -ms-overflow-style: -ms-autohiding-scrollbar;
+      align-items: center;
+    }
 
-      a {
-        flex:0 0 auto;
-        padding-top: rem(26);
-        padding-bottom: rem(26);
-        padding-right:rem(12);
-        padding-left:rem(12);
-        line-height: 1;
-        font-weight:600;
-        color:color(3);
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: .5px;
+      .copy{
+        display: inline-block;
+        color:color(6);
+        font-weight: bold;
+      }
+
+      .phone {
+        display: inline-block;        
+        margin-left: rem(24);
+        font-weight: bold;
+        text-decoration: underline;  
         
+        .phone-icon {
+          display: inline-block;
+          margin-right:rem(8);
 
-        &.active {
-          font-weight: 800;
-        }
-
-        &:focus {
-          outline: none;
-          background-color: color(2);
+          &:before {
+            @include icon;
+            content:'phone';
+            color: color(6);
+          }          
         }
       }
-    }
 
 }

@@ -25,10 +25,12 @@
     var icons;
     if (!supportsProperty('fontFeatureSettings')) {
         icons = {
-            'calendar': '&#xe903;',
-            'select': '&#xe900;',
+            'download': '&#xe900;',
+            'visibility': '&#xe902;',
+            'folder': '&#xe903;',
+            'chevron': '&#xe905;',
+            'phone': '&#xe904;',
             'check': '&#xe901;',
-            'logout': '&#xe902;',
           '0': 0
         };
         delete icons['0'];
