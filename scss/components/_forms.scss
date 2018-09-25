@@ -2,8 +2,23 @@
 $boolean-wrapper:rem(24);
 
 .checkbox {
+
+  .label-wrapper{
+    display: inline-flex;    
+  }
+
+  .label {
+    display: flex;
+    align-items: center;
+    font-size:rem(10);
+    color:color(5);
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+
+  
+
   //hiding input for the user but not for the screen reader
-  input[type="radio"],
   input[type="checkbox"] {
     vertical-align: middle;
     position: absolute;
@@ -25,7 +40,30 @@ $boolean-wrapper:rem(24);
       margin-right:rem(12);
       
       background-color: color(4);
-      border: 1px solid color(6);    
+      border: 2px solid color(3);    
+      border-radius:2px;
     }
-  }
+
+    & + span {                                    
+      //radio value off
+      &:before {
+        content:"check"; 
+        //centering          
+        @include icon;
+        color:color(8);                            
+                    
+        opacity:0;
+        transform:scale(0);
+        transition: opacity .3s, transform .3s; 
+      }                            
+    }
+    
+    &:checked + span {
+      //radio value on
+      &:before {
+        opacity:1;
+        transform:scale(1);
+      }
+    }      
+  }    
 }

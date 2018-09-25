@@ -1,3 +1,95 @@
 .main-content {
-  
+
+  .main-mod {
+    border: 1px solid color(6);
+  }
+
+    .mod-header{
+      padding: rem(24);
+    }
+
+      .mod-header-flex {
+        display: flex;
+        justify-content: space-between;
+      }
+
+        .mod-header-desc{
+          display: flex;
+        }
+
+          .desc-img{
+            width: rem(160);
+            height: rem(160);
+
+            margin-right:rem(24);
+          }
+
+          .mod-header-features {
+            display: flex;
+            flex-flow: column;
+
+            div {
+              display: flex;
+              margin-bottom: rem(8);
+
+              dt {
+                flex: 0 0 rem(180);
+                margin-right:rem(24);
+                color: color(5);
+              }
+
+              dd {
+                flex:1 0 auto;
+                font-weight: bold;
+              }
+            }
+
+          }
+
+    .mod-table {
+      width: 100%;
+      th,td {
+        padding: rem(24);
+        border-bottom: 1px solid color(6);
+      }
+
+      .row-active {
+        td {
+          background:color(10);
+        }        
+      }
+    }
+
+    .filetype-item{
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .icon-chevron{
+      display: inline-flex;
+      margin-right: rem(18);
+      &:before {
+        @include icon;
+        content:"chevron";
+      }
+    }
+
+    .icon-folder{
+      display: inline-flex;
+      margin-right: rem(18);
+      &:before {
+        @include icon;
+        content:"folder";
+      }
+    }
+
+    .icon-download{
+      display: inline-flex;
+      margin-right: rem(18);
+      &:before {
+        @include icon;
+        content:"download";
+      }
+    }
+
 }
