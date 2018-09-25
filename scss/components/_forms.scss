@@ -1,0 +1,31 @@
+//checkbox wrapper
+$boolean-wrapper:rem(24);
+
+.checkbox {
+  //hiding input for the user but not for the screen reader
+  input[type="radio"],
+  input[type="checkbox"] {
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    
+    & + span {
+      //centering
+      display: flex;
+      align-items: center;
+      justify-content: center;          
+      
+      flex: 0 1 $boolean-wrapper;
+      
+      min-width:$boolean-wrapper;
+      height:$boolean-wrapper;
+
+      margin-right:rem(12);
+      
+      background-color: color(4);
+      border: 1px solid color(6);    
+    }
+  }
+}

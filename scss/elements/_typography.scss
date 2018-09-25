@@ -1,0 +1,26 @@
+//https://www.cssfontstack.com/Arial
+$font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+$font-family-serif: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+
+ 
+html {
+  font-size:100%;
+  line-height: 1.5;
+  font-family: $font-family;
+  color: color(3);
+
+  //https://css-tricks.com/almanac/properties/t/text-rendering/
+  text-rendering: optimizeSpeed;
+
+  //https://davidwalsh.name/font-smoothing
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+//main page heading
+h1{  
+  font-size: rem(32);
+  font-family: $font-family;  
+}
+
+

@@ -1,0 +1,14 @@
+// the most common width which can be divided by 8
+// https://material.io/tools/devices/
+// http://gridcalculator.dk/#/1280/12/20/20
+
+$container-max-width:rem(1280);
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+  
+  padding-left:rem(20);
+  padding-right:rem(20);
+}

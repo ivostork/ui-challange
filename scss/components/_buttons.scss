@@ -1,0 +1,41 @@
+@mixin btn-structure {
+  @include appearance(none);
+  display: inline-block;
+  position: relative;  
+  vertical-align: middle;
+  box-sizing: border-box;
+
+  padding: rem(12) rem(16);
+  line-height: 1;
+  height:rem(42);
+  
+  opacity: 1;
+  text-align: center;
+  text-decoration: none;
+
+  cursor: pointer;
+  background:none;
+  border:none;
+  letter-spacing: .44px;
+
+  &:active {
+    @include transform(scale(0.98));
+    outline:none;
+  }
+}
+
+.btn-primary {
+  @include btn-structure;  
+  
+  color:color(4);
+  background-color: color(1);
+  border:1px solid transparent;
+
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight:bold;
+
+  &:hover {
+    text-decoration:underline
+  }
+}

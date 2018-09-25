@@ -1,0 +1,60 @@
+.header {
+  position: relative;
+  z-index: 1;
+  background-color: color(4);
+
+  
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: rem(24);
+      font-weight: bold;
+      letter-spacing: .5px;
+      white-space: nowrap;
+
+      color:color(3);
+      text-decoration: none;
+
+      &:focus {
+        background-color:color(2);
+      }
+    }
+
+    .navigation {
+      display: flex;
+      overflow: auto;
+      margin-left:rem(8);
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+
+      a {
+        flex:0 0 auto;
+        padding-top: rem(26);
+        padding-bottom: rem(26);
+        padding-right:rem(12);
+        padding-left:rem(12);
+        line-height: 1;
+        font-weight:600;
+        color:color(3);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        
+
+        &.active {
+          font-weight: 800;
+        }
+
+        &:focus {
+          outline: none;
+          background-color: color(2);
+        }
+      }
+    }
+
+}

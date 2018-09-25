@@ -1,0 +1,33 @@
+$colors: (
+  #feba01         // 1  -- primary color red
+  #7DE0E6         // 2  -- accent color blue
+  #333333         // 3  -- color for copy
+  #FFFFFF         // 4  -- white
+  rgba(0,0,0,.54) // 5 -- grey
+  rgba(0,0,0,.24) // 6 -- lighter grey
+  #fafafa         // 7 -- lightest grey
+  #D0021B         // 8 -- empty
+  #feba01         // 9 -- empty
+  #ffffff         // 10 -- empty
+  #ffffff         // 11 -- empty
+);
+
+/*************************/
+/* Using variable colors */
+/*************************/
+
+// Use the function color(xx) to return color code by its index.
+// Example:
+// .sample-class {
+//     background-color: color(10);
+//     color: color(20);
+// }
+
+@function color($i) {
+  @if nth($colors, $i) != DEPRECATED {
+    @return nth($colors, $i);
+  } @else {
+    @warn "COLOR #{$i} IS DEPRECATED AND CANNOT BE USED.";
+    @return false;
+  }
+}
